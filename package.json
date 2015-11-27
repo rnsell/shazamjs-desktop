@@ -1,0 +1,20 @@
+{
+  "name": "shazamjs-desktop",
+  "version": "1.0.0",
+  "description": "Desktop version of Shazamjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./lib/**/*.test.js",
+    "start": "electron main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rnsell/shazamjs-desktop.git"
+  },
+  "author": "rnsell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rnsell/shazamjs-desktop/issues"
+  },
+  "homepage": "https://github.com/rnsell/shazamjs-desktop#readme"
+}
