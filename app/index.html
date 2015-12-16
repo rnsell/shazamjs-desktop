@@ -2,7 +2,7 @@
 <html ng-app="shazamApp">
 
 <head>
-  <title>Hello World!</title>
+  <title>ShazamJs!</title>
   <!-- Jquery -->
   <script>
     window.$ = window.jQuery = require('./angular_modules/jquery/jquery');
@@ -24,61 +24,59 @@
 
   <script src="app.js"></script>
   <script src="./lib/controller/shazam.controller.js"></script>
-  <script src="./lib/shazamapps/shazamapps.class.js"></script>
 
 
 
 </head>
 
 <body ng-app="shazamApp">
-  <nav class="navbar navbar-default"></nav>
-  <div class="container" ng-controller = "shazam.controller">
+  <!--<nav class="navbar navbar-default"></nav>-->
+  <div class="container" ng-controller="shazam.controller">
     <div class="jumbotron">
       <div class="row">
-        <div class="col-md-12 text-center" >
-          <img ng-src="{{imgUrl}}" alt="Description" height="500px" width="300px"/>
+        <div class="col-md-12 text-center">
+          <img ng-src="{{imgUrl}}" alt="Description" height="500px" width="300px" />
         </div>
       </div>
       <br/>
       <div class="row">
-        <div class="col-md-12 text-center" >
+        <div class="col-md-12 text-center">
           <button ng-click="shazam()" class="btn btn-primary btn-lg" style="margin:auto"> Shazam!</button>
         </div>
       </div>
-
     </div>
     <div class="row">
       <div class="col-md-4 text-center">
-        <h2 class="text-center">{{appState.WebsiteApp.shazamHeader}}</h2>
-        <p>{{appState.WebsiteApp.appDesc}}</p>
-        <p>Count: {{appState.WebsiteApp.count}}</p>
+        <h2 class="text-center">{{appState.websiteApp.shazamHeader}}</h2>
+        <p>{{appState.websiteApp.appDesc}}</p>
+        <p>Count: {{appState.websiteApp.count}}</p>
       </div>
-      <div class="col-md-4 text-center">
-        <h2 class="text-center">{{appState.DesktopApp.shazamHeader}}</h2>
-        <p>{{appState.DesktopApp.appDesc}}</p>
-        <p>Count: {{appState.DesktopApp.count}}</p>
+      <div class="col-md-4 text-center" ng-style="appState.desktopApp.visible ? {'visibility': 'visible'} : {'visibility': 'hidden'}">
+        <h2 class="text-center">{{appState.desktopApp.shazamHeader}}</h2>
+        <p>{{appState.desktopApp.appDesc}}</p>
+        <p>Count: {{appState.desktopApp.count}}</p>
       </div>
-      <div class="col-md-4 text-center">
-        <h2 class="text-center">{{appState.HardwareApp.shazamHeader}}</h2>
-        <p>{{appState.HardwareApp.appDesc}}</p>
-        <p>Count: {{appState.HardwareApp.count}}</p>
+      <div class="col-md-4 text-center" ng-style="appState.hardwareApp.visible ? {'visibility': 'visible'} : {'visibility': 'hidden'}">
+        <h2 class="text-center">{{appState.hardwareApp.shazamHeader}}</h2>
+        <p>{{appState.hardwareApp.appDesc}}</p>
+        <p>Count: {{appState.hardwareApp.count}}</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4 text-center">
-        <h2 class="text-center">{{appState.ConsoleApp.shazamHeader}}</h2>
-        <p>{{appState.ConsoleApp.appDesc}}</p>
-        <p>Count: {{appState.ConsoleApp.count}}</p>
+      <div class="col-md-4 text-center" ng-style="appState.consoleApp.visible ? {'visibility': 'visible'} : {'visibility': 'hidden'}">
+        <h2 class="text-center">{{appState.consoleApp.shazamHeader}}</h2>
+        <p>{{appState.consoleApp.appDesc}}</p>
+        <p>Count: {{appState.consoleApp.count}}</p>
       </div>
       <div class="col-md-4 text-center">
         <h2 class="text-center">Enabled</h2>
         <p></p>
         <p></p>
       </div>
-      <div class="col-md-4 text-center">
-        <h2 class="text-center">{{appState.MobileApp.shazamHeader}}</h2>
-        <p>{{appState.MobileApp.appDesc}}</p>
-        <p>Count: {{appState.MobileApp.count}}</p>
+      <div class="col-md-4 text-center" ng-style="appState.mobileApp.visible ? {'visibility': 'visible'} : {'visibility': 'hidden'}">
+        <h2 class="text-center">{{appState.mobileApp.shazamHeader}}</h2>
+        <p>{{appState.mobileApp.appDesc}}</p>
+        <p>Count: {{appState.mobileApp.count}}</p>
       </div>
     </div>
   </div>
