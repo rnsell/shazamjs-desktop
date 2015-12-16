@@ -1,5 +1,5 @@
 /*jslint vars: true, devel:true, nomen: true, node: true, indent: 2, maxerr: 50*/
-/*global describe, it, angular, io*/
+/*global describe, it, angular, io, audio*/
 'use strict';
 
 (function () {
@@ -45,6 +45,8 @@
     }
 
     function onTransform(newState) {
+      var audio = new Audio("assets/shazam.transform.mp3");
+      audio.play();
       // console.log("Transform called @" + new Date());
       // console.log(newState);
       onRefresh(newState);
