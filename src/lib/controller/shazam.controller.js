@@ -7,7 +7,8 @@
   var app = angular.module("shazamApp");
 
   function ShazamController($scope) {
-    var socket = io("http://localhost:8080");
+    var socket = io("https://secure-citadel-7581.herokuapp.com/");
+    // var socket = io("http://localhost:8080");
 
     var shazamMsg = {
       location: "desktopApp"

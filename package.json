@@ -2,7 +2,7 @@
   "name": "shazamjs-desktop",
   "version": "1.0.0",
   "description": "Desktop version of Shazamjs",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "mocha ./lib/**/*.test.js",
     "start": "electron main.js"
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/rnsell/shazamjs-desktop/issues"
   },
-  "homepage": "https://github.com/rnsell/shazamjs-desktop#readme"
+  "homepage": "https://github.com/rnsell/shazamjs-desktop#readme",
+  "dependencies": {
+    "electron-prebuilt": "^0.36.0"
+  }
 }
